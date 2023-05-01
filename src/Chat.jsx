@@ -31,13 +31,15 @@ function getCharacterByUrl() {
     return character;
   }
 
+  const systemMessage = {
+    role: "system",
+    content: "hi",
+  };
+
 function Chat() {
   const character = getCharacterByUrl();
 
-  const systemMessage = {
-    role: "system",
-    content: character.prompt,
-  };
+
 
   const [messages, setMessages] = useState([
     {
