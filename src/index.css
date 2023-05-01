@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Tajawal", sans-serif;
+  background: #e0e0e0;
+}
+
+.header {
+  padding: 15px 30px 0 30px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background: white;
+  box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.71);
+  -webkit-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.71);
+}
+
+.section-title {
+  border-bottom: 2px solid black;
+}
+
+.section-content {
+}
+
+.Home {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-content {
+  background-color: #e0e0e0;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card-wrapper {
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  /* For phone screens */
+  .card-wrapper {
+    width: 95vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* For tablet screens */
+  .card-wrapper {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* For larger screens */
+  .card-wrapper {
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+}
+
+.cs-message__content-wrapper {
+  direction: rtl
+}
