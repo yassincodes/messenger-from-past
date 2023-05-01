@@ -13,7 +13,7 @@ import { useLocation } from "react-router-dom";
 import array5 from "./arrays/array5";
 import array6 from "./arrays/array6";
 
-const VITE_Open_AI_Key = import.meta.env.VITE_Open_AI_Key;
+const Open_AI_Key = import.meta.env.Open_AI_Key;
 
 const combinedArray = [...array5, ...array6];
 
@@ -31,15 +31,13 @@ function getCharacterByUrl() {
     return character;
   }
 
-  const systemMessage = {
-    role: "system",
-    content: "hi",
-  };
-
 function Chat() {
   const character = getCharacterByUrl();
 
-
+  const systemMessage = {
+    role: "system",
+    content: character.prompt,
+  };
 
   const [messages, setMessages] = useState([
     {
@@ -97,7 +95,7 @@ function Chat() {
     await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + VITE_Open_AI_Key,
+        Authorization: "Bearer " + Open_AI_Key,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
