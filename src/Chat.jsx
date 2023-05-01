@@ -104,7 +104,6 @@ function Chat() {
         return data.json();
       })
       .then((data) => {
-        console.log(data);
         setMessages([
           ...chatMessages,
           {
@@ -140,7 +139,6 @@ function Chat() {
           }
         >
           {messages.map((message, i) => {
-            console.log(message);
             return <Message key={i} model={message} />;
           })}
         </MessageList>
